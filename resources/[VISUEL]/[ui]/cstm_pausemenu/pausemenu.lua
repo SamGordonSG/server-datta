@@ -1,0 +1,16 @@
+function AddTextEntry(key, value)
+	Citizen.InvokeNative(GetHashKey("ADD_TEXT_ENTRY"), key, value)
+end
+
+Citizen.CreateThread(function()
+  AddTextEntry('FE_THDR_GTAO', '~y~Amazing V ~m~| ~b~Discord~m~: ~b~Egk8Bdg~m~ | ~r~ID~m~ ' .. GetPlayerServerId(PlayerId())) 
+  AddTextEntry('PM_PANE_LEAVE', 'Faire un petit somme')
+  AddTextEntry('PM_PANE_QUIT', 'Quitter cette merveilleuse ville')
+  AddTextEntry('PM_SCR_MAP', 'Carte de Los Santos')
+  AddTextEntry('PM_SCR_GAM', 'Prendre l\'avion')
+  AddTextEntry('PM_SCR_INF', 'info')
+  AddTextEntry('PM_SCR_SET', 'Configuration')
+  AddTextEntry('PM_SCR_STA', 'Statistiques')
+  AddTextEntry('PM_SCR_GAL', 'Galerie')
+  AddTextEntry('PM_SCR_RPL', 'Éditeur ∑')
+end)

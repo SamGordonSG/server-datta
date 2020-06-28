@@ -1,0 +1,2 @@
+INSERT INTO items (name, label, limit, rare, can_remove, price) VALUES
+('badgepolice', 'Carte à puce de police', 100, 0, 1, 0);

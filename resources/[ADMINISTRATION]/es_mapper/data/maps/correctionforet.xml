@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Map xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Metadata>
+    <Creator>es_mapper</Creator>
+    <Name>es_mapper</Name>
+    <Description>es_mapper</Description>
+    <TeleportPoint>
+      <X>0.0</X>
+      <Y>0.0</Y>
+      <Z>0.0</Z>
+      <Heading>0.0</Heading>
+    </TeleportPoint>
+  </Metadata>
+  <Objects>
+  </Objects>
+</Map>

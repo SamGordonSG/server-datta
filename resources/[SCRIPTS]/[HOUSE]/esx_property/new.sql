@@ -1,0 +1,1 @@
+ALTER TABLE `owned_properties` ADD `shared` VARCHAR(60) NULL AFTER `owner`;
