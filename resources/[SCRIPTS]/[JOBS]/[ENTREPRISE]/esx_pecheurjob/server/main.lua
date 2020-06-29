@@ -345,7 +345,7 @@ local function Sell(source, zone)
 			else
 				if (saumon_fume == 1) then
 					SetTimeout(4000, function()
-						local argent = math.random(30,30)
+						local argent = math.random(15,15)
 						local money = math.random(30,30)
 						xPlayer.removeInventoryItem('saumon_fume', 1)
 						local societyAccount = nil
@@ -363,7 +363,7 @@ local function Sell(source, zone)
 					end)
 				elseif (boite_thon == 1) then
 					SetTimeout(1000, function()
-						local argent = math.random(20,20)
+						local argent = math.random(10,10)
 						local money = math.random(20,20)
 						xPlayer.removeInventoryItem('boite_thon', 1)
 						local societyAccount = nil
@@ -381,7 +381,7 @@ local function Sell(source, zone)
 					end)
 				elseif (samoussa_crevette == 1) then
 					SetTimeout(1000, function()
-						local argent = math.random(40,40)
+						local argent = math.random(20,20)
 						local money = math.random(40,40)
 						xPlayer.removeInventoryItem('samoussa_crevette', 1)
 						local societyAccount = nil

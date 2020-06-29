@@ -22,10 +22,13 @@ client_scripts {
 	'@es_extended/locale.lua',
 	'locales/fr.lua',
 	'config.lua',
+	'client/client.lua',
 	'client/ambulance.lua',
 	'client/brasseur.lua',
 	'client/petitstudio.lua',
 	'client/foodtruck.lua'
+
+
 }
 
 dependencies {

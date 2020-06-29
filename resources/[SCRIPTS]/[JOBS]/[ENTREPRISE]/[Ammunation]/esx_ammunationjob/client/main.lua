@@ -134,7 +134,7 @@ function OpenAmmuActionsMenu()
     {label = _U('deposit_stock'), value = 'put_stock'}
   }
   
-  If PlayerData.job ~= nil and PlayerData.job.grade_name == 'second' or PlayerData.job.grade_name =='boss' or PlayerData.job.grade_name == 'professionnel' or PlayerData.job.grade_name == 'employer' then 
+  if PlayerData.job ~= nil and PlayerData.job.grade_name == 'second' or PlayerData.job.grade_name =='boss' or PlayerData.job.grade_name == 'professionnel' or PlayerData.job.grade_name == 'employer' then 
 	table.insert(elements, {label = 'Prendre Stock', value = 'get_stock'})
     table.insert(elements, {label = 'Prendre Arme', value = 'get_weapon'})
 	table.insert(elements, {label = 'Déposer Arme', value = 'put_weapon'})

@@ -91,11 +91,11 @@ function OpenCloakroomMenu()
 		{ label = _U('citizen_wear'), value = 'citizen_wear' }
 	}
 
-	if org == 'soldato' then
+	if org == 'recruit' then
 		table.insert(elements, {label = _U('cartel_wear'), value = 'recruit_wear'})
-	elseif org == 'capo' then
+	elseif org == 'sergeant' then
 		table.insert(elements, {label = _U('cartel_wear'), value = 'sergeant_wear'})
-	elseif org == 'consigliere' then
+	elseif org == 'lieutenant' then
 		table.insert(elements, {label = _U('cartel_wear'), value = 'lieutenant_wear'})
 	elseif org == 'boss' then
 		table.insert(elements, {label = _U('cartel_wear'), value = 'boss_wear'})

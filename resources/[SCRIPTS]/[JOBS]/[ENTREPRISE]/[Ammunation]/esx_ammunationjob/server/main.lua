@@ -105,7 +105,7 @@ ESX.RegisterServerCallback('esx_ammunationjob:removeArmoryWeapon', function(sour
 
   local xPlayer = ESX.GetPlayerFromId(source)
 
-  xPlayer.addWeapon(weaponName, 1000)
+  xPlayer.addWeapon(weaponName, 0)
 
   TriggerEvent('esx_datastore:getSharedDataStore', 'society_ammunation', function(store)
 
@@ -182,10 +182,10 @@ local function Harvest(source)
       local xPlayer  = ESX.GetPlayerFromId(source)
       local CarbonQuantity = xPlayer.getInventoryItem('carbon').count
 
-      if CarbonQuantity >= 650 then
+      if CarbonQuantity >= 250 then
         TriggerClientEvent('esx:showNotification', source, _U('you_do_not_room'))
       else
-        xPlayer.addInventoryItem('carbon', 50)
+        xPlayer.addInventoryItem('carbon', 10)
         Harvest(source)
       end
     end
@@ -214,10 +214,10 @@ local function Harvest2(source)
 
       local xPlayer  = ESX.GetPlayerFromId(source)
       local AcierQuantity  = xPlayer.getInventoryItem('acier').count
-      if AcierQuantity >= 650 then
+      if AcierQuantity >= 250 then
         TriggerClientEvent('esx:showNotification', source, _U('you_do_not_room'))
       else
-                xPlayer.addInventoryItem('acier', 50)
+                xPlayer.addInventoryItem('acier', 10)
 
         Harvest2(source)
       end
@@ -246,12 +246,12 @@ local function HarvestMunition(source)
 
 		local xPlayer  = ESX.GetPlayerFromId(source)
 			local itemQuantity = xPlayer.getInventoryItem('poudre').count
-			if itemQuantity >= 650 then
+			if itemQuantity >= 250 then
 				TriggerClientEvent('esx:showNotification', source, _U('not_enough_place'))
 				return
 			else
 				SetTimeout(1800, function()
-					xPlayer.addInventoryItem('poudre', 100)
+					xPlayer.addInventoryItem('poudre', 10)
 					HarvestMunition(source)
 				end)
 			end
@@ -292,12 +292,12 @@ local function HarvestMunition2(source)
 
 		local xPlayer  = ESX.GetPlayerFromId(source)
 			local itemQuantity = xPlayer.getInventoryItem('douille').count
-			if itemQuantity >= 650 then
+			if itemQuantity >= 250 then
 				TriggerClientEvent('esx:showNotification', source, _U('not_enough_place'))
 				return
 			else
 				SetTimeout(1800, function()
-					xPlayer.addInventoryItem('douille', 100)
+					xPlayer.addInventoryItem('douille', 10)
 					HarvestMunition2(source)
 				end)
 			end
@@ -346,9 +346,9 @@ local function TransformMunition(source)
 				return
 			else
 				SetTimeout(1800, function()
-					xPlayer.removeInventoryItem('poudre', 30)
-					xPlayer.removeInventoryItem('douille', 30)
-					xPlayer.addInventoryItem('clip', 30)
+					xPlayer.removeInventoryItem('poudre', 10)
+					xPlayer.removeInventoryItem('douille', 10)
+					xPlayer.addInventoryItem('clip', 1)
 					TriggerClientEvent('esx:showNotification', source, 'Vous avez assemblé des balles et les avez conditionné dans un chargeur')
 					TransformMunition(source)
 				end)
@@ -497,8 +497,7 @@ local function CraftPistolet(source)
       if carbone and acier and clip and societymoney then
         xPlayer.removeInventoryItem('carbon', 5)
 		xPlayer.removeInventoryItem('acier', 4)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_PISTOL', 42)
+		xPlayer.addWeapon('WEAPON_PISTOL', 0)
 		
 		local societyAccount = nil
 
@@ -571,11 +570,10 @@ local function CraftCombatPistol(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 5)
 		xPlayer.removeInventoryItem('acier', 6)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_COMBATPISTOL', 42)
+		xPlayer.addWeapon('WEAPON_COMBATPISTOL', 0)
 		
 		local societyAccount = nil
 
@@ -648,11 +646,10 @@ local function CraftSnsPistol(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 4)
 		xPlayer.removeInventoryItem('acier', 3)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_SNSPISTOL', 42)
+		xPlayer.addWeapon('WEAPON_SNSPISTOL', 0)
 		
 		local societyAccount = nil
 
@@ -725,11 +722,10 @@ local function CraftHeavyPistolmk2(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 7)
 		xPlayer.removeInventoryItem('acier', 5)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_PISTOL_MK2', 42)
+		xPlayer.addWeapon('WEAPON_PISTOL_MK2', 0)
 		
 		local societyAccount = nil
 
@@ -797,7 +793,7 @@ local function CraftPumpShotgun(source)
       if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 8)
 		xPlayer.removeInventoryItem('acier', 5)
-		xPlayer.addWeapon('WEAPON_PUMPSHOTGUN', 42)
+		xPlayer.addWeapon('WEAPON_PUMPSHOTGUN', 0)
 		
 		local societyAccount = nil
 
@@ -866,7 +862,7 @@ local function CraftMusket(source)
       if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 7)
 		xPlayer.removeInventoryItem('acier', 9)
-		xPlayer.addWeapon('WEAPON_MUSKET', 42)
+		xPlayer.addWeapon('WEAPON_MUSKET', 0)
 		
 		local societyAccount = nil
 
@@ -927,7 +923,7 @@ local function CraftStungun(source)
 	  
       if acier and societymoney then
 		xPlayer.removeInventoryItem('acier', 3)
-		xPlayer.addWeapon('WEAPON_STUNGUN', 42)
+		xPlayer.addWeapon('WEAPON_STUNGUN', 0)
 		
 		local societyAccount = nil
 
@@ -1000,11 +996,10 @@ local function CraftPistol50(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 7)
 		xPlayer.removeInventoryItem('acier', 4)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_PISTOL50', 42)
+		xPlayer.addWeapon('WEAPON_PISTOL50', 0)
 		
 		local societyAccount = nil
 
@@ -1077,11 +1072,10 @@ local function CraftPumpShotgunmk2(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 10)
 		xPlayer.removeInventoryItem('acier', 7)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_PUMPSHOTGUN_MK2', 42)
+		xPlayer.addWeapon('WEAPON_PUMPSHOTGUN_MK2', 0)
 		
 		local societyAccount = nil
 
@@ -1154,11 +1148,10 @@ local function CraftCarbineRifle(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 40)
 		xPlayer.removeInventoryItem('acier', 11)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_CARBINERIFLE', 42)
+		xPlayer.addWeapon('WEAPON_CARBINERIFLE', 0)
 		
 		local societyAccount = nil
 
@@ -1231,11 +1224,10 @@ local function CraftAssaultSmg(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 30)
 		xPlayer.removeInventoryItem('acier', 15)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_ASSAULTSMG', 42)
+		xPlayer.addWeapon('WEAPON_ASSAULTSMG', 0)
 		
 		local societyAccount = nil
 
@@ -1308,11 +1300,10 @@ local function CraftCombatPdw(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 35)
 		xPlayer.removeInventoryItem('acier', 20)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_COMBATPDW', 42)
+		xPlayer.addWeapon('WEAPON_COMBATPDW', 0)
 		
 		local societyAccount = nil
 
@@ -1385,11 +1376,10 @@ local function CraftBullpupShotgun(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 35)
 		xPlayer.removeInventoryItem('acier', 15)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_BULLPUPSHOTGUN', 42)
+		xPlayer.addWeapon('WEAPON_BULLPUPSHOTGUN', 0)
 		
 		local societyAccount = nil
 
@@ -1462,11 +1452,10 @@ local function CraftSniperRifle(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 100)
 		xPlayer.removeInventoryItem('acier', 125)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_SNIPERRIFLE', 42)
+		xPlayer.addWeapon('WEAPON_SNIPERRIFLE', 0)
 		
 		local societyAccount = nil
 
@@ -1539,11 +1528,10 @@ local function CraftHeavySniper(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 70)
 		xPlayer.removeInventoryItem('acier', 15)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_HEAVYSNIPER', 42)
+		xPlayer.addWeapon('WEAPON_HEAVYSNIPER', 0)
 		
 		local societyAccount = nil
 
@@ -1616,11 +1604,10 @@ local function CraftDoubleAction(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 125)
 		xPlayer.removeInventoryItem('acier', 45)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_DOUBLEACTION', 42)
+		xPlayer.addWeapon('WEAPON_DOUBLEACTION', 0)
 		
 		local societyAccount = nil
 
@@ -1700,11 +1687,10 @@ local function CraftAssaultShotgun(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 50)
 		xPlayer.removeInventoryItem('acier', 20)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_ASSAULTSHOTGUN', 42)
+		xPlayer.addWeapon('WEAPON_ASSAULTSHOTGUN', 0)
 		
 		local societyAccount = nil
 
@@ -1777,11 +1763,10 @@ local function CraftSMG(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 45)
 		xPlayer.removeInventoryItem('acier', 10)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_SMG', 42)
+		xPlayer.addWeapon('WEAPON_SMG', 0)
 		
 		local societyAccount = nil
 
@@ -1854,11 +1839,10 @@ local function CraftCarbineRiflemk2(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 30)
 		xPlayer.removeInventoryItem('acier', 20)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_CARBINERIFLE_MK2', 42)
+		xPlayer.addWeapon('WEAPON_CARBINERIFLE_MK2', 0)
 		
 		local societyAccount = nil
 
@@ -1931,11 +1915,10 @@ local function CraftSpecialCarbine(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 65)
 		xPlayer.removeInventoryItem('acier', 35)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_SPECIALCARBINE', 42)
+		xPlayer.addWeapon('WEAPON_SPECIALCARBINE', 0)
 		
 		local societyAccount = nil
 
@@ -2008,11 +1991,10 @@ local function CraftSpecialCarbinemk2(source)
 	    acier = true
 	  end
 	  
-      if carbone and acier and clip and societymoney then
+      if carbone and acier and societymoney then
 		xPlayer.removeInventoryItem('carbon', 150)
 		xPlayer.removeInventoryItem('acier', 150)
-		xPlayer.removeInventoryItem('clip', 1)
-		xPlayer.addWeapon('WEAPON_SPECIALCARBINE_MK2', 142)
+		xPlayer.addWeapon('WEAPON_SPECIALCARBINE_MK2', 0)
 		
 		local societyAccount = nil
 

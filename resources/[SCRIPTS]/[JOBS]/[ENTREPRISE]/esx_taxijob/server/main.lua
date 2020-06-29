@@ -27,8 +27,8 @@ AddEventHandler('esx_taxijob:success', function()
 
 	if societyAccount ~= nil then
 
-		local playerMoney  = math.floor(total / 100 * 50)
-		local societyMoney = math.floor(total / 100 * 50)
+		local playerMoney  = math.floor(total / 2)
+		local societyMoney = math.floor(total)
 
 		xPlayer.addMoney(playerMoney)
 		societyAccount.addMoney(societyMoney)

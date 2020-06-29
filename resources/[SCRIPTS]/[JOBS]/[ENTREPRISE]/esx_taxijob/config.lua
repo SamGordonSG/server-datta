@@ -1,6 +1,6 @@
 Config                            = {}
 Config.DrawDistance               = 100.0
-Config.NPCJobEarnings             = {min = 200, max = 200}
+Config.NPCJobEarnings             = {min = 40, max = 50}
 Config.MaxInService               = -1
 Config.EnablePlayerManagement     = true
 Config.EnableSocietyOwnedVehicles = false

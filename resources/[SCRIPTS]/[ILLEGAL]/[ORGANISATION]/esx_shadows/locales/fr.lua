@@ -1,9 +1,9 @@
 Locales['fr'] = {
   -- Cloakroom
-  ['vagos'] = 'Vagos',
+  ['shadows'] = 'Shadows',
   ['cloakroom'] = 'Vestiaire',
   ['citizen_wear'] = 'tenue Civil',
-  ['vagos_wear'] = 'Tenue vagos',
+  ['shadows_wear'] = 'Tenue shadows',
   ['open_cloackroom'] = 'Appueyz sur ~INPUT_CONTEXT~ pour vous changer',
   -- Coffre
   ['get_weapon'] = 'Prendre Arme',
@@ -52,9 +52,9 @@ Locales['fr'] = {
   ['owner_unknown'] = 'Propriétaire : Inconnu',
   ['owner'] = 'Propriétaire : ',
   -- Weapons Menus
-  ['get_weapon_menu'] = 'vagos - Prendre Arme',
-  ['put_weapon_menu'] = 'vagos - Déposer Arme',
-  ['buy_weapon_menu'] = 'vagos - Acheter Armes',
+  ['get_weapon_menu'] = 'shadows - Prendre Arme',
+  ['put_weapon_menu'] = 'shadows - Déposer Arme',
+  ['buy_weapon_menu'] = 'shadows - Acheter Armes',
   ['not_enough_money'] = 'Vous n\'avez pas assez d\'argent',
   -- Boss Menu
   ['take_company_money'] = 'Retirer argent société',
@@ -67,8 +67,8 @@ Locales['fr'] = {
   ['have_withdrawn'] = 'Vous avez retiré x',
   ['added'] = 'Vous avez ajouté x',
   ['quantity'] = 'Quantité',
-  ['get_stock'] = 'vagos - Prendre Objet',
-  ['put_stock'] = 'vagos - Déposer Objet',
+  ['get_stock'] = 'shadows - Prendre Objet',
+  ['put_stock'] = 'shadows - Déposer Objet',
   ['gradeorg'] = 'Grade',
   -- Notifications
   ['from'] = '~s~ à ~b~',

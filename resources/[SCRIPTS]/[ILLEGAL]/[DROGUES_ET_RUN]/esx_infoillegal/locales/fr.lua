@@ -16,7 +16,7 @@ Locales['fr'] = {
 	['TraiCrack'] 			= 'Tu es très demandeur toi, domme moi un peu plus de fric et je t\'offre la revente avec',
 	['TraiCrack1'] 			= 'Tu es la pour le traitement de Crack près de la pharmacie de Harmony',
 	['RevCrack'] 			= 'Je te donne l\'info que si tu me balance pas aux flic',
-	['RevCrack1'] 			= 'Ok tu trouveras la revente de Crack près des vignes, reviens quand tu veux fère',
+	['RevCrack1'] 			= 'Ok tu trouveras la revente de Crack près des vignes, reviens quand tu veux frère',
 	
 	['opium'] 			= 'Recolte d\'Opium (',
 	['opium1'] 			= '$)',
@@ -28,7 +28,7 @@ Locales['fr'] = {
 	['TraiOpium'] 			= 'Tu es très demandeur toi, domme moi un peu plus de fric et je t\'offre la revente avec',
 	['TraiOpium1'] 			= 'Tu es la pour le traitement d opium va voir près de l arena dans un garage',
 	['RevOpium'] 			= 'Je te donne l\'info que si tu me balance pas aux flic',
-	['RevOpium1'] 			= 'Ok tu trouveras la revente d Opium près du barbier de la plage, reviens quand tu veux fère',	
+	['RevOpium1'] 			= 'Ok tu trouveras la revente d Opium près du barbier de la plage, reviens quand tu veux frère',	
 	
 	['coke'] 			= 'Recolte de Coke (',
 	['coke1'] 			= '$)',
@@ -40,7 +40,7 @@ Locales['fr'] = {
 	['TraiCoke'] 			= 'Tu es très demandeur toi, domme moi un peu plus de fric et je t\'offre la revente avec',
 	['TraiCoke1'] 			= 'Ah je suis tête en l\'air tu es la pour le traitement de Coke dans une grange à Grapeseed',
 	['RevCoke'] 			= 'Je te donne l\'info que si tu me balance pas aux flic',
-	['RevCoke1'] 			= 'Ok tu trouveras la revente de Coke chez des gens très naturels, reviens quand tu veux fère',
+	['RevCoke1'] 			= 'Ok tu trouveras la revente de Coke chez des gens très naturels, reviens quand tu veux frère',
 	
 	['ecstasy'] 			= 'Recolte de ecstasy (',
 	['ecstasy1'] 			= '$)',
@@ -52,5 +52,5 @@ Locales['fr'] = {
 	['TraiEcstasy'] 		= 'Tu es très demandeur toi, domme moi un peu plus de fric et je t\'offre la revente avec',
 	['TraiEcstasy1'] 		= 'Tu es la pour le traitement de Ecstasy va voir près de l autoroute pour aller aux docks',
 	['RevEcstasy'] 			= 'Je te donne l\'info que si tu me balance pas aux flic',
-	['RevEcstasy1'] 		= 'Ok tu trouveras la revente d Ecstasy sur la plage au sud est de la ville, reviens quand tu veux fère'
+	['RevEcstasy1'] 		= 'Ok tu trouveras la revente d Ecstasy sur la plage au sud est de la ville, reviens quand tu veux frère'
 }

@@ -199,8 +199,8 @@ function OpenCloakroomMenu()
 
 		if
 			data.current.value == 'recruit_wear' or
-			data.current.value == 'novice_wear' or
-			data.current.value == 'experienced_wear' or
+			data.current.value == 'sergeant_wear' or
+			data.current.value == 'lieutenant_wear' or
 			data.current.value == 'boss_wear'
 		then
 			setUniform(data.current.value, playerPed)

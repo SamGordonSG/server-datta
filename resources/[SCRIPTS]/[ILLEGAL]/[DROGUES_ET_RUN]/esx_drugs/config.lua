@@ -54,7 +54,7 @@ Config.Zones = {
 	---------------------------------------------------------------------------------------------------------------------------
 	BilletField         = {x=605.4480,  y=-3093.4470, z=6.0692,	name = _U('billet_field'),		 sprite = 500,	color = 1},
 	BilletProcessing    = {x=-1077.92,  y=-1678.19,  z=3.57,	name = _U('billet_processing'),	 sprite = 500,	color = 1},
-	BilletDealer        = {x=1486.75,   y=1131.6477, z=113.33,	name = _U('billet_dealer'),		 sprite = 500,	color = 1},
+	BilletDealer        = {x = -805.46917724609,y = 169.46632385254,z = 72.844665527344,	name = _U('billet_dealer'),		 sprite = 500,	color = 1},
 	---------------------------------------------------------------------------------------------------------------------------
 	OpiumField      	= {x=1838.24,	y=5035.191,  z=57.272,	name = _U('opium_field'),		 sprite = 51,	color = 60},
 	OpiumProcessing 	= {x=-438.544,  y=-2184.25,  z=10.522,	name = _U('opium_processing'),	 sprite = 51,	color = 60},

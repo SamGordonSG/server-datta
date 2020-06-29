@@ -35,23 +35,23 @@ Config.ShadowsStations = {
 		},
 		
     Armories = {
-      { x = 331.791, y = -2013.663, z = 22.394 }, -- fait
+      { x = 1405.7432861328,y = 1138.0656738281,z = 109.74568176274 }, -- fait
     },
 
     Vehicles = {
       {
-        Spawner    = { x = 333.728, y = -2020.528, z = 21.861 }, -- fait
-        SpawnPoint = { x = 333.826, y = -2038.454, z = 21.088 }, -- fait
-        Heading    = 49.675, -- fait
+        Spawner    = { x = 1400.6292724609,y = 1122.3995361328,z = 114.83802032471 }, -- fait
+        SpawnPoint = { x = 1395.4311523438,y = 1117.4038085938,z = 114.83771514893 }, -- fait
+        Heading    = 87.109, -- fait
       }
     },
 
     VehicleDeleters = {
-      { x = 317.100, y = -2031.832, z = 20.589 }, -- fait
+      { x = 1410.9074707031,y = 1118.6343994141,z = 114.83794403076 }, -- fait
     },
 
     BossActions = {
-      { x = 336.387, y = -2014.910, z = 22.394 } -- fait
+      { x = 1393.1929931641,y = 1159.9919433594,z = 114.33339691162 } -- fait
     },
 
 	},
@@ -59,9 +59,19 @@ Config.ShadowsStations = {
 }
 
 -- https://wiki.rage.mp/index.php?title=Vehicles
+
 Config.AuthorizedVehicles = {
-  { name = 'tornado5',    label = 'Tornado LR' }, --Ajouter le vehicule moddé
-  { name = 'bison',     label = 'Bison' }
+	Shared = {   
+		{model = 'bison', label = 'Bison', price = 49500},
+	},
+    
+    lieutenant = {
+		{model = 'vstr', label = 'V-str', price = 49500},
+    },
+    
+    boss = {
+		{model = 'vstr', label = 'V-str', price = 49500},
+	}
 }
 
 -- CHECK SKINCHANGER CLIENT MAIN.LUA for matching elements

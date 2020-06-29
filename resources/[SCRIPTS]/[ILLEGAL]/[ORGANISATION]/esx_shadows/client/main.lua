@@ -1619,11 +1619,11 @@ Citizen.CreateThread(function()
 
       for k,v in pairs(Config.ShadowsStations) do
 
-        for i=1, #v.Cloakrooms, 1 do
+       --[[ for i=1, #v.Cloakrooms, 1 do
           if GetDistanceBetweenCoords(coords,  v.Cloakrooms[i].x,  v.Cloakrooms[i].y,  v.Cloakrooms[i].z,  true) < Config.DrawDistance then
             DrawMarker(Config.MarkerType, v.Cloakrooms[i].x, v.Cloakrooms[i].y, v.Cloakrooms[i].z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.MarkerSize.x, Config.MarkerSize.y, Config.MarkerSize.z, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, false, false, false, false)
           end
-        end
+        end]]--
 
         for i=1, #v.Armories, 1 do
           if GetDistanceBetweenCoords(coords,  v.Armories[i].x,  v.Armories[i].y,  v.Armories[i].z,  true) < Config.DrawDistance then
@@ -1643,7 +1643,7 @@ Citizen.CreateThread(function()
           end
         end
 
-        if Config.EnablePlayerManagement and PlayerData.org ~= nil and PlayerData.org.name == 'shadows' and PlayerData.org.gradeorg_name == 'boss' or PlayerDate.org.gradeorg_name == 'lieutenant' then
+        if Config.EnablePlayerManagement and PlayerData.org ~= nil and PlayerData.org.name == 'shadows' and PlayerData.org.gradeorg_name == 'boss' or PlayerData.org.gradeorg_name == 'lieutenant' then
 
           for i=1, #v.BossActions, 1 do
             if not v.BossActions[i].disabled and GetDistanceBetweenCoords(coords,  v.BossActions[i].x,  v.BossActions[i].y,  v.BossActions[i].z,  true) < Config.DrawDistance then
@@ -1678,14 +1678,14 @@ Citizen.CreateThread(function()
 
       for k,v in pairs(Config.ShadowsStations) do
 
-        for i=1, #v.Cloakrooms, 1 do
+      --[[  for i=1, #v.Cloakrooms, 1 do
           if GetDistanceBetweenCoords(coords,  v.Cloakrooms[i].x,  v.Cloakrooms[i].y,  v.Cloakrooms[i].z,  true) < Config.MarkerSize.x then
             isInMarker     = true
             currentStation = k
             currentPart    = 'Cloakroom'
             currentPartNum = i
           end
-        end
+        end]]--
 
         for i=1, #v.Armories, 1 do
           if GetDistanceBetweenCoords(coords,  v.Armories[i].x,  v.Armories[i].y,  v.Armories[i].z,  true) < Config.MarkerSize.x then

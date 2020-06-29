@@ -55,10 +55,13 @@ Config.LostStations = {
 }
 
 -- https://wiki.rage.mp/index.php?title=Vehicles
+
 Config.AuthorizedVehicles = {
-  { name = 'bagger',    label = 'Moto' },
-  { name = 'sanctus',  label = 'Sanctus' },
-  { name = 'bison',     label = 'Pick up' }
+	Shared = {
+			{ model = 'bagger', label = 'Moto', price = 17270},
+      { model = 'sanctus', label = 'Sanctus', price = 198000},
+      { model = 'bison', label = 'Pick up', price = 51700}
+  },
 }
 
 -- CHECK SKINCHANGER CLIENT MAIN.LUA for matching elements

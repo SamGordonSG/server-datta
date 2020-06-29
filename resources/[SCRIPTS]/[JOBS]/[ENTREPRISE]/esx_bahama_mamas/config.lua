@@ -346,12 +346,12 @@ Config.Uniforms = {
         ['chain_1'] = 118,  ['chain_2'] = 0
     },
     female = {
-        ['tshirt_1'] = 75,   ['tshirt_2'] = 3,
-        ['torso_1'] = 10,   ['torso_2'] = 0,
+        ['tshirt_1'] = 8,   ['tshirt_2'] = 0,
+        ['torso_1'] = 112,   ['torso_2'] = 2,
         ['decals_1'] = 0,   ['decals_2'] = 0,
         ['arms'] = 4,
-        ['pants_1'] = 28,   ['pants_2'] = 0,
-        ['shoes_1'] = 21,   ['shoes_2'] = 0,
+        ['pants_1'] = 15,   ['pants_2'] = 0,
+        ['shoes_1'] = 42,   ['shoes_2'] = 0,
         ['chain_1'] = 0,    ['chain_2'] = 0
     }
   }
